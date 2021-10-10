@@ -1,0 +1,123 @@
+body{
+    background-color: #9933FF;
+    margin: 0;
+}
+
+
+.container{
+    display:flex;
+    justify-content: right;
+    align-items: right;
+    padding-top: 90px;
+    padding-right: 110px;
+}
+img{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    background-size: cover;
+}
+
+
+a {
+    text-decoration: none;
+  }
+
+  label {
+    font-family: "Raleway", sans-serif;
+    font-size: 11pt;
+    color: #9933FF;
+  }
+
+  #card {
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 410px;
+
+    width: 329px;
+    justify-content: right;
+  }
+  #card-content {
+    padding: 12px 44px;
+  }
+  #card-title {
+    font-family: "Helvetica", sans-serif;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+  }
+  #signup {
+    color: #9933FF;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 8px;
+    text-align: center;
+    text-decoration: underline;
+  }
+  #submit-btn {
+    background: -webkit-linear-gradient(right, #9933FF, #9933FF);
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0px 1px 8px #9933FF;
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway SemiBold", sans-serif;
+    height: 42.3px;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: 0.25s;
+    width: 153px;
+  }
+  #submit-btn:hover {
+    box-shadow: 0px 1px 18px #9933FF;
+  }
+  .form {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-border {
+    background: -webkit-linear-gradient(right, #9933FF, #9933FF);
+    height: 1px;
+    width: 100%;
+  }
+  .form-content {
+    background: #fbfbfb;
+    border: none;
+    outline: none;
+    padding-top: 14px;
+  }
+  .underline-title {
+    background: -webkit-linear-gradient(right, #9933FF, #9933FF);
+    height: 2px;
+    margin: -1.1rem auto 0 auto;
+    width: 89px;
+  }
+
+  h2{
+      color:#9933FF ;
+      font-size: 20px;
+  }
+
+  input:checked {
+    margin-left: 25px;
+
+  }
+
+  .about{
+    color: #9933FF;
+    font-family: "Raleway", sans-serif;
+    font-size: 8pt;
+    margin-top: 13px;
+    text-align: center;
+  }
+
+  #forgotPassword{
+    color: #9933FF;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: underline;
+  }
