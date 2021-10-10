@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+      <div>
+        <div style="padding-top: 0%;" >
+            <img src="img/banco_digital.jpg" >
+        </div>
+        </div>
+        <div class="container">
+        <div id="card">
+          <div id="card-content">
+            <div id="card-title">
+              <h2>Faça seu login</h2>
+            </div>
+            <form method="post" class="form">
+              <label for="user-email" >
+                  &nbsp;Email
+                </label>
+              <input  id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
+              <div class="form-border"></div>
+              <label for="user-password" style="padding-top:22px">&nbsp;Password
+                </label>
+              <input id="user-password" class="form-content" type="password" name="password" required />
+              <div class="form-border"></div>
+              <div style="padding-top: 5px;">
+                <input type="checkbox" id="remember" name="remember" >
+                <label for="remember">Lembrar-me</label>
+              </div>  
+             <input id="submit-btn" type="submit" name="submit" value="Entrar" />
+              <a href="#" id="forgotPassword" >Esqueceu a senha?</a>
+              <a class="about">JFMBank, o banco que sempre estará ao seu lado</a>
+
+              <a href="#" id="signup">Abra sua conta</a>
+            </form>
+          </div>
+        </div>
+</div>
+
+<script>
+  const produtos = ["Notebooks","Tvs","Celulares"];
+
+  
+  var listaProduto = [];
+  var posicao=0;
+  listaProduto[posicao]="<h2>Lista de produtos mais pesquisados:</h2>";
+
+  for(var i=0;i<produtos.length;i++){
+    const pd = "<ul><li style='font-size:16px;color:blue;font-family: Arial, Helvetica, sans-serif;'>"+produtos[i]+"</li></ul>";
+    posicao=posicao+1;
+    listaProduto[posicao]=pd;
+  }
+
+
+document.getElementById("demo").innerHTML=listaProduto;
+
+
+
+</script>
+
+</body>
+</html>
+
