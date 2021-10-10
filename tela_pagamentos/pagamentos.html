@@ -1,0 +1,183 @@
+<html>
+
+<head>
+
+  <script src="https://kit.fontawesome.com/ab02388e1d.js" src="pagamentos.js" crossorigin="anonymous"></script>
+  <title>Menu Horizontal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="menu" style="list-style: none;">
+    <ul>
+      <li class="flex2"><img src="assets/imagem_banco.PNG"></li>
+      <li id="flex10">
+        <ul>
+          <li>
+            <input type="text" id="txtBusca" placeholder="Digite aqui sua busca..." style="margin-right: 0px;" />
+          <li>
+            <i style="background: white; padding-top: 5px; padding: 2px;  color: #d7b2f0; margin-left: -30px; border-radius: 6px; font-size: 15px;"
+              class="fas fa-search color-icon"></i>
+          </li>
+      </li>
+      <li class="flex1"><a href=""><i class="far fa-bell color-icon"></i></a></li>
+      <li class="flex1"><a href=""><i class="far fa-question-circle color-icon"></i></a></li>
+      <li class="flex1"><a href=""><i class="far fa-user-circle color-icon"></i></a></li>
+    </ul>
+    </li>
+    </ul>
+  </div>
+
+  <div class="content" style="border-radius: 5px; border: 1 solid; ">
+    <nav class="side-menu content-menu">
+
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Conta Corrente</a></li>
+        <li><a href="#">Transferências</a></li>
+        <li><a href="#">Pagamentos</a></li>
+        <li><a href="#">Investimentos</a></li>
+        <li><a href="#">Imprestimos</a></li>
+        <li><a href="javascript:void(0);">Cartões<i class="fas fa-angle-right color-icon">&nbsp;</i></a>
+          <ul class="sub-menu">
+            <li><a href="#">- Cartão adicional</a></li>
+            <li><a href="#">- Cartão premium</a></li>
+            <li><a href="#">- Cartão free</a></li>
+            <li><a href="#">- Cartão ilimitado</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Outros</a></li>
+      </ul>
+    </nav>
+    <div class="content-data">
+      <h3 class="title">
+        Pagar ou Parcelar Fatura
+      </h3>
+      <div class="card">
+        <div class="card-content">
+          <h4 class="card-title">
+            Fatura por e-mail
+          </h4>
+          <p class="p">
+            Receba sua fatura por e-mail sem se preocupar com os Correios e ainda ganhe R$10 de
+            crédito na sua fatura¹.
+            A fatura será enviada para o e-mail cadastrado no dia seguinte ao fechamento, a senha
+            para abertura do arquivo é o seu CPF completo. E você pode acessar a sua fatura
+            diretamente pelo app.
+          </p>
+          <div class="button-div">
+            <button class="button">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="card-2">
+        <div class="card-content">
+          <h4 class="card-title">
+            Simular Limite Cartão Play
+          </h4>
+          <div class="form-wrapper">
+            <form class="p">
+              <label class="animateInput">Nome</label>
+              <input type="text" />
+              <label class="animateInput">Cidade</label>
+              <input type="text" />
+              <label class="animateInput">Estado</label>
+              <input type="text" />
+              <label class="animateInput">País</label>
+              <input type="text" />
+              <label class="animateInput">Data Nascimento</label>
+              <input type="text" />
+              <label class="animateInput">Renda Mensal</label>
+              <input type="text" />
+              <div class="button-div">
+                <button class="button-2">Limpar</button>
+                <button class="button">Simular</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="card-3">
+        <div class="card-content table-wrapper">
+          <h4 class="card-title">
+            Tabela de Simulação
+          </h4>
+          <table>
+            <thead>
+              <tr>
+                <th class="span2"><input type="checkbox" id="scales" name="scales"></th>
+                <th class="span4">Nome</th>
+                <th class="span2">Cidade</th>
+                <th class="span2">Estado/Província</th>
+                <th class="span2">País</th>
+                <th class="span2">Data Nascimento</th>
+                <th class="span2">Renda Mensal</th>
+                <th class="span2">Limite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="span2"><input type="checkbox" id="scales" name="scales" checked></th>
+                <td>Felipe Martins</td>
+                <td>Blumenau</td>
+                <td>SC</td>
+                <td>Brasil</td>
+                <td>22/06/1987</td>
+                <td>R$ 2.000,00</td>
+                <td>R$ 730,00</td>
+              </tr>
+              <tr>
+                <th class="span2"><input type="checkbox" id="scales" name="scales"></th>
+                <td>Jéssica Moura</td>
+                <td>São Paulo</td>
+                <td>SP</td>
+                <td>Brasil</td>
+                <td>22/07/1993</td>
+                <td>R$ 1.100,00</td>
+                <td>R$ 420,00</td>
+              </tr>
+              <tr>
+                <th class="span2"><input type="checkbox" id="scales" name="scales"></th>
+                <td>João da Silva</td>
+                <td>Florianópolis</td>
+                <td>SC</td>
+                <td>Brasil</td>
+                <td>22/10/1985</td>
+                <td>R$ 7.000,00</td>
+                <td>R$ 2.300,00</td>
+              </tr>
+              <tr>
+                <th class="span2"><input type="checkbox" id="scales" name="scales"></th>
+                <td>Maria Souza</td>
+                <td>Espanha</td>
+                <td>Madri</td>
+                <td>Itália</td>
+                <td>09/01/1994</td>
+                <td>R$ 4.500,00</td>
+                <td>R$ 1.100,00</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="button-pag" style="padding-left: 80%;">
+            <li>
+              <button class="button-pag"><i class="fas fa-angle-double-left"></i></button>
+                  <button class="button-pag">1</button>
+                  <button class="button-pag">2</button>
+                  <button class="button-pag"><i class="fas fa-angle-double-right"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
