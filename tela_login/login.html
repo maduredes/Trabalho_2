@@ -10,6 +10,7 @@
             <img src="img/banco_digital.jpg" >
         </div>
         </div>
+
         <div class="container">
         <div id="card">
           <div id="card-content">
@@ -20,7 +21,7 @@
               <label for="user-email" >
                   &nbsp;Email
                 </label>
-              <input  id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
+              <input  id="user-email" class="form-content"  type="email" name="email" autocomplete="on" required />
               <div class="form-border"></div>
               <label for="user-password" style="padding-top:22px">&nbsp;Password
                 </label>
@@ -30,7 +31,7 @@
                 <input type="checkbox" id="remember" name="remember" >
                 <label for="remember">Lembrar-me</label>
               </div>  
-             <input id="submit-btn" type="submit" name="submit" value="Entrar" />
+             <button id="submit-btn" onclick="abrirCadastro()" type="submit" name="submit"  >Entrar</button>
               <a href="#" id="forgotPassword" >Esqueceu a senha?</a>
               <a class="about">JFMBank, o banco que sempre estará ao seu lado</a>
 
@@ -41,23 +42,19 @@
 </div>
 
 <script>
-  const produtos = ["Notebooks","Tvs","Celulares"];
 
+function abrirCadastro(){
+  var directory=window.location.href;
+directory= directory.replace("/tela_login/login.html","/tela_pagamentos/pagamentos.html");
+
+if(document.getElementById("user-email").value!='' && document.getElementById("user-password").value!=''){
+
+
+         window.open(directory);
+
+}
   
-  var listaProduto = [];
-  var posicao=0;
-  listaProduto[posicao]="<h2>Lista de produtos mais pesquisados:</h2>";
-
-  for(var i=0;i<produtos.length;i++){
-    const pd = "<ul><li style='font-size:16px;color:blue;font-family: Arial, Helvetica, sans-serif;'>"+produtos[i]+"</li></ul>";
-    posicao=posicao+1;
-    listaProduto[posicao]=pd;
-  }
-
-
-document.getElementById("demo").innerHTML=listaProduto;
-
-
+}
 
 </script>
 
