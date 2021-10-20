@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="css.css">
+    <title>Cadastrar-se</title>
+</head>
+<body>
+
+    <div class="left"></div>
+    <div class="right">  
+        <div class="cadastrar">
+            <div class="logo">
+                <td><img src="logo.png"></td>
+            </div>
+            <div class="card">
+                <div class="titulo">
+                    <h1><b>Abra Sua Conta!</b></h1><br><br>
+                </div>
+
+                <label for="txtCPF">CPF</label>               
+                <input id="CPF" type="number" name="Nome"><br>
+                <label for="txtNome">Nome</label>
+                <input id="name" type="text" name="Nome"><br>
+                <div class="calendario">
+                    <label for="txtDataNasc">Data Nascimento</label>
+                    <input id="dataNasci" type="text" name="Nome"><br>
+                </div>
+                <label for="txtEmail">E-mail</label>
+                <input id="Email" type="text" name="Nome"><br>
+                <label for="txtSenha">Senha</label>
+                <input id="senha" type="password" name="Nome"><br>
+                <label for="txtConfirmar">Confirmar Senha</label>
+                <input id="confirmarsenha" type="password" name="password"><br><br><br><br>
+                
+                
+                <div class="btnCadastrar">
+                    <input type="Submit"  onclick="abrirCadastro()" value="Cadastrar-se">
+                </div>
+                <div class="btnVoltar">
+                    <input type="Submit" onclick="voltar()" value="Voltar">
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+<script>
+function voltar(){
+    directory= directory.replace("/tela_login/login.html","/tela_login/login.html");
+    window.open(directory);
+}
+
+function abrirCadastro(){
+var directory=window.location.href;
+directory= directory.replace("/tela_login/login.html","/tela_login/login.html");
+
+    if(document.getElementById("CPF").value!='' && document.getElementById("name").value!='' && document.getElementById("dataNasci").value!='' && document.getElementById("Email").value!=''&& document.getElementById("senha").value!=''&& document.getElementById("confirmarsenha").value!=''){
+
+            alert('Cadastro Concluído com sucesso!')
+            window.open(directory);
+
+    } else{
+        alert('Dados imcompletos!')
+    }
+}
+</script>
+</body>
+</html>
+

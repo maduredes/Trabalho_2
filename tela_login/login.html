@@ -3,14 +3,18 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
 
+
+
 </head>
 <body>
       <div>
-        <div style="padding-top: 0%;" >
-            <img src="img/banco_digital.jpg" >
-        </div>
-        </div>
+        
+            <img class="imageBank" src="img/banco_digital.jpg" >
+       
+      
+
         <div class="container">
+          
         <div id="card">
           <div id="card-content">
             <div id="card-title">
@@ -20,7 +24,7 @@
               <label for="user-email" >
                   &nbsp;Email
                 </label>
-              <input  id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
+              <input  id="user-email" class="form-content"  type="email" name="email" autocomplete="on" required />
               <div class="form-border"></div>
               <label for="user-password" style="padding-top:22px">&nbsp;Password
                 </label>
@@ -30,33 +34,36 @@
                 <input type="checkbox" id="remember" name="remember" >
                 <label for="remember">Lembrar-me</label>
               </div>  
-             <input id="submit-btn" type="submit" name="submit" value="Entrar" />
+             <button id="submit-btn" onclick="logar()" name="submit"  >Entrar</button>
               <a href="#" id="forgotPassword" >Esqueceu a senha?</a>
               <a class="about">JFMBank, o banco que sempre estará ao seu lado</a>
 
-              <a href="#" id="signup">Abra sua conta</a>
+              <a href="#" onclick="abrirCadastro()" id="signup">Abra sua conta</a>
             </form>
           </div>
         </div>
 </div>
 
 <script>
-  const produtos = ["Notebooks","Tvs","Celulares"];
 
-  
-  var listaProduto = [];
-  var posicao=0;
-  listaProduto[posicao]="<h2>Lista de produtos mais pesquisados:</h2>";
 
-  for(var i=0;i<produtos.length;i++){
-    const pd = "<ul><li style='font-size:16px;color:blue;font-family: Arial, Helvetica, sans-serif;'>"+produtos[i]+"</li></ul>";
-    posicao=posicao+1;
-    listaProduto[posicao]=pd;
+  function abrirCadastro(){
+    var directory=window.location.href;
+    directory= directory.replace("/tela_login/login.html","/tela_cadastro/pagina.html");
+
+      window.open(directory);
   }
 
+function logar(){
+  var novUrl=window.location.href;
+    novUrl= novUrl.replace("/tela_login/login.html","/tela_pagamentos/pagamentos.html");
 
-document.getElementById("demo").innerHTML=listaProduto;
+if(document.getElementById("user-email").value!='' && document.getElementById("user-password").value!=''){
 
+        window.open(novUrl);
+  }
+  
+}
 
 
 </script>
