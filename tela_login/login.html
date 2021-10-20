@@ -3,15 +3,18 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
 
+
+
 </head>
 <body>
       <div>
-        <div style="padding-top: 0%;" >
-            <img src="img/banco_digital.jpg" >
-        </div>
-        </div>
+        
+            <img class="imageBank" src="img/banco_digital.jpg" >
+       
+      
 
         <div class="container">
+          
         <div id="card">
           <div id="card-content">
             <div id="card-title">
@@ -31,11 +34,11 @@
                 <input type="checkbox" id="remember" name="remember" >
                 <label for="remember">Lembrar-me</label>
               </div>  
-             <button id="submit-btn" onclick="abrirCadastro()" type="submit" name="submit"  >Entrar</button>
+             <button id="submit-btn" onclick="logar()" name="submit"  >Entrar</button>
               <a href="#" id="forgotPassword" >Esqueceu a senha?</a>
               <a class="about">JFMBank, o banco que sempre estará ao seu lado</a>
 
-              <a href="#" id="signup">Abra sua conta</a>
+              <a href="#" onclick="abrirCadastro()" id="signup">Abra sua conta</a>
             </form>
           </div>
         </div>
@@ -43,18 +46,25 @@
 
 <script>
 
-function abrirCadastro(){
-  var directory=window.location.href;
-directory= directory.replace("/tela_login/login.html","/tela_pagamentos/pagamentos.html");
+
+  function abrirCadastro(){
+    var directory=window.location.href;
+    directory= directory.replace("/tela_login/login.html","/tela_cadastro/pagina.html");
+
+      window.open(directory);
+  }
+
+function logar(){
+  var novUrl=window.location.href;
+    novUrl= novUrl.replace("/tela_login/login.html","/tela_pagamentos/pagamentos.html");
 
 if(document.getElementById("user-email").value!='' && document.getElementById("user-password").value!=''){
 
-
-         window.open(directory);
-
-}
+        window.open(novUrl);
+  }
   
 }
+
 
 </script>
 
