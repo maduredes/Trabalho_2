@@ -30,31 +30,33 @@
 
   <div class="content" style="border-radius: 5px; border: 1 solid; ">
     <nav class="side-menu content-menu">
-
       <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Conta Corrente</a></li>
-        <li><a href="#">Transferências</a></li>
-        <li><a href="#">Pagamentos</a></li>
-        <li><a href="#">Investimentos</a></li>
-        <li><a href="#">Imprestimos</a></li>
-        <li><a href="javascript:void(0);">Cartões<i class="fas fa-angle-right color-icon">&nbsp;</i></a>
-          <ul class="sub-menu">
-            <li><a href="#">- Cartão adicional</a></li>
-            <li><a href="#">- Cartão premium</a></li>
-            <li><a href="#">- Cartão free</a></li>
-            <li><a href="#">- Cartão ilimitado</a></li>
+        <li><a href="#" class="item1" onclick="inicio('item1')">Início</a></li>
+        <li><a href="#" class="item2" onclick="contaCorrente('item2')">Conta Corrente</a></li>
+        <li><a href="#" class="item3" onclick="transferencia('item3')">Transferências</a></li>
+        <li><a href="#" class="item4" onclick="menuBold('item4')">Pagamentos</a></li>
+        <li><a href="#" class="item5" onclick="menuBold('item5')">Investimentos</a></li>
+        <li><a href="#" class="item6" onclick="menuBold('item6')">Impréstimos</a></li>
+        <li>
+          <a href="javascript:void(0)" class="item7" onclick="dropdown('item7')">Cartões<i
+              class="fas fa-angle-right color-icon">&nbsp;</i></a>
+          <ul>
+            <div id="myDropdown" class="dropdown-content">
+              <li><a href="#" class="item8" onclick="menuBold('item8')">- Cartão adicional</a></li>
+              <li><a href="#" class="item9" onclick="menuBold('item9')">- Cartão premium</a></li>
+              <li><a href="#" class="item10" onclick="menuBold('item10')">- Cartão free</a></li>
+              <li><a href="#" class="item11" onclick="menuBold('item11')">- Cartão ilimitado</a></li>
+            </div>
           </ul>
         </li>
-        <li><a href="#">Outros</a></li>
+        <li><a href="#" class="item12" onclick="menuBold('item12')">Outros</a></li>
       </ul>
     </nav>
     <div class="content-data">
-      <h3 class="title">
-        Pagar ou Parcelar Fatura
-      </h3>
+      <br>
+      <br>
       <div class="card">
-        <div class="card-content">
+        <div class="card-content visible hide" id="inicio">
           <h4 class="card-title">
             Fatura por e-mail
           </h4>
@@ -64,6 +66,31 @@
             A fatura será enviada para o e-mail cadastrado no dia seguinte ao fechamento, a senha
             para abertura do arquivo é o seu CPF completo. E você pode acessar a sua fatura
             diretamente pelo app.
+          </p>
+          <div class="button-div">
+            <button class="button">Saiba mais</button>
+          </div>
+        </div>
+        <div class="card-content hide" id="contaCorrente">
+          <h4 class="card-title">
+            Sobre os valores dos nossos pacotes
+          </h4>
+          <p class="p">
+            Você conta com diversas opções de pacotes
+            de serviços para escolher a que mais combina com as suas necessidades,
+            incluindo o Pacote de Serviços Essenciais gratuito.
+          </p>
+          <div class="button-div">
+            <button class="button">Saiba mais</button>
+          </div>
+        </div>
+        <div class="card-content hide" id="transferencia">
+          <h4 class="card-title">
+            10 dias sem juros no limite da conta
+          </h4>
+          <p class="p">
+            Cadastre e mantenha CPF ou celular como chave Pix no JFMbank e ganhe um fôlego para gerenciar gastos
+            inesperados.
           </p>
           <div class="button-div">
             <button class="button">Saiba mais</button>
@@ -80,20 +107,20 @@
           <div class="form-wrapper">
             <form class="p">
               <label class="animateInput">Nome</label>
-              <input type="text" />
+              <input type="text" required />
               <label class="animateInput">Cidade</label>
-              <input type="text" />
+              <input type="text" required />
               <label class="animateInput">Estado</label>
-              <input type="text" />
+              <input type="text" required />
               <label class="animateInput">País</label>
-              <input type="text" />
+              <input type="text" required />
               <label class="animateInput">Data Nascimento</label>
-              <input type="text" />
+              <input type="text" required />
               <label class="animateInput">Renda Mensal</label>
-              <input type="text" />
+              <input type="text" required />
               <div class="button-div">
-                <button class="button-2">Limpar</button>
                 <button class="button">Simular</button>
+                <input class="button-2" type="reset" value="Limpar">
               </div>
             </form>
           </div>
@@ -165,9 +192,9 @@
           <ul class="button-pag" style="padding-left: 80%;">
             <li>
               <button class="button-pag"><i class="fas fa-angle-double-left"></i></button>
-                  <button class="button-pag">1</button>
-                  <button class="button-pag">2</button>
-                  <button class="button-pag"><i class="fas fa-angle-double-right"></i></button>
+              <button class="button-pag">1</button>
+              <button class="button-pag">2</button>
+              <button class="button-pag"><i class="fas fa-angle-double-right"></i></button>
             </li>
           </ul>
         </div>
@@ -178,6 +205,7 @@
     </div>
   </div>
   </div>
+  <script src="./pagamentos.js?v=2"></script>
 </body>
 
 </html>
