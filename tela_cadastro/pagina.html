@@ -17,31 +17,52 @@
                 </div>
 
                 <label for="txtCPF">CPF</label>               
-                <input type="text" name="Nome"><br>
+                <input id="CPF" type="text" name="Nome"><br>
                 <label for="txtNome">Nome</label>
-                <input type="text" name="Nome"><br>
+                <input id="name" type="text" name="Nome"><br>
                 <div class="calendario">
                     <label for="txtDataNasc">Data Nascimento</label>
-                    <input type="text" name="Nome"><br>
+                    <input id="dataNasci" type="date" name="Nome"><br>
                 </div>
                 <label for="txtEmail">E-mail</label>
-                <input type="text" name="Nome"><br>
+                <input id="Email" type="text" name="Nome"><br>
                 <label for="txtSenha">Senha</label>
-                <input type="text" name="Nome"><br>
+                <input id="senha" type="password" name="Nome"><br>
                 <label for="txtConfirmar">Confirmar Senha</label>
-                <input type="text" name="Nome"><br>
+                <input id="confirmarsenha" type="password" name="password"><br><br><br><br>
+                
                 
                 <div class="btnCadastrar">
-                    <input type="Submit"  onclick="alert('Cadastrar-se')" value="Cadastrar-se">
+                    <input type="Submit"  onclick="abrirCadastro()" value="Cadastrar-se">
                 </div>
                 <div class="btnVoltar">
-                    <input type="Submit" onclick="alert('Voltar')" value="Voltar">
+                    <input type="Submit" onclick="voltar()" value="Voltar">
                 </div>
                 
                 
             </div>
         </div>
     </div>
+<script>
+function voltar(){
+    var directory=window.location.href;
+    directory= directory.replace("/tela_cadastro/pagina.html","/tela_login/login.html");
+    window.open(directory);
+}
+
+function abrirCadastro(){
+var directory=window.location.href;
+directory= directory.replace("/tela_cadastro/pagina.html","/tela_login/login.html");
+
+    if(document.getElementById("CPF").value!='' && document.getElementById("name").value!='' && document.getElementById("dataNasci").value!='' && document.getElementById("Email").value!=''&& document.getElementById("senha").value!=''&& document.getElementById("confirmarsenha").value!=''){
+
+            alert('Cadastro Concluído com sucesso!')
+            window.open(directory);
+
+    } else{
+        alert('Dados imcompletos!')
+    }
+}
+</script>
 </body>
 </html>
-

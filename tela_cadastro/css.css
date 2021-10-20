@@ -42,7 +42,7 @@ text-align: center;
     color: rgb(150, 16, 239);
 }
 
-input[type="text"],input[type="password"], input[type="number"]{
+input[type="text"],input[type="password"],input[type="date"]{
     background-color: white;
     border-color: rgb(150, 16, 239);
     border-radius: 4px;
@@ -107,12 +107,7 @@ label {
     right: 20px;
 }
 
-.calendario input{
-    background-image: url("calendario.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    
-}
+
 
 .right {
     float: right;
