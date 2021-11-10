@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@angular/core": "^13.0.0",
+    "@angular/router": "^13.0.0",
+    "ng-download": "^1.0.3"
+  }
+}
