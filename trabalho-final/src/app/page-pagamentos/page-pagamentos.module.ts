@@ -3,16 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { PagePagamentosComponent } from './page-pagamentos.component';
 import { PagamentosRoutingModule } from './page-pagamentos-routing.module';
-import { MenuSidebarComponent } from '../menu-sidebar/menu-sidebar.component';
+import { MenuSidebarModule } from '../menu-sidebar/menu-sidebar.module';
 
 @NgModule({
   declarations: [
-    PagePagamentosComponent,
-    MenuSidebarComponent
+    PagePagamentosComponent
   ],
   imports: [
     CommonModule,
-    PagamentosRoutingModule
+    PagamentosRoutingModule,
+    MenuSidebarModule
   ]
 })
 export class PagePagamentosModule { }
