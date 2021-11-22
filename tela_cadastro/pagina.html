@@ -45,16 +45,18 @@
     </div>
 <script>
 function voltar(){
-    directory= directory.replace("/tela_login/login.html","/tela_login/login.html");
+    var directory=window.location.href;
+
+    directory= directory.replace("/tela_cadastro/pagina.html","/tela_login/login.html");
     window.open(directory);
 }
 
 function abrirCadastro(){
 var directory=window.location.href;
-directory= directory.replace("/tela_login/login.html","/tela_login/login.html");
+directory= directory.replace("/tela_cadastro/pagina.html","/tela_login/login.html");
 
     if(document.getElementById("CPF").value!='' && document.getElementById("name").value!='' && document.getElementById("dataNasci").value!='' && document.getElementById("Email").value!=''&& document.getElementById("senha").value!=''&& document.getElementById("confirmarsenha").value!=''){
-
+            cadastrarUsuario();
             alert('Cadastro Concluído com sucesso!')
             window.open(directory);
 
@@ -62,6 +64,62 @@ directory= directory.replace("/tela_login/login.html","/tela_login/login.html");
         alert('Dados imcompletos!')
     }
 }
+function cadastrarUsuario(){
+    event.preventDefault()
+    let url="http://localhost:8080/api/cadastro-cliente"
+    let cpf=document.getElementById("CPF").value;
+    let nome=document.getElementById("name").value;
+    let email=document.getElementById("Email").value;
+    let senha=document.getElementById("senha").value;
+    let dataNascimento=document.getElementById("dataNasci").value;
+    var myString = dataNascimento;
+    var array = new Array();
+    array = myString.split('/');
+
+    var dataFormatada = (array[2] + "-" + array[1] + "-" + array[0]);
+
+     body={
+    "nome":nome,
+    "email":email,
+    "password":senha,
+    "dataNascimento":dataFormatada,
+    "cpf":cpf
+    }
+    post(url,body);
+    let data=get(url);
+    console.log(data);
+    let usarios=JSON.parse(data);
+    usarios.array.forEach(element => {
+        console.log("Nome: "+ element.nome);
+    });
+
+
+}
+function post(url, body){
+    let request= new XMLHttpRequest()
+    request.open("POST",url,true)
+    request.setRequestHeader('Content-type','application/json')
+    request.setRequestHeader('Access-Control-Allow-Origin','*')
+    request.setRequestHeader('Access-Control-Allow-Methods','OPTIONS,POST,GET')
+
+    request.send(JSON.stringify(body))
+    
+
+   return request.responseText
+}
+function get(url){
+  let request= new XMLHttpRequest();
+    request.open("GET",url,true);
+    request.setRequestHeader('Content-type','application/json');
+    request.setRequestHeader('Access-Control-Allow-Origin','*');
+    request.setRequestHeader('Access-Control-Allow-Methods','OPTIONS,POST,GET');
+
+    request.send();
+    console.log(request.responseText);
+   return request.responseText;
+}
+
+
 </script>
 </body>
 </html>
