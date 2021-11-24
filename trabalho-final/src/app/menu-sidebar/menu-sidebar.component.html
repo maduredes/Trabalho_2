@@ -2,14 +2,14 @@
   <!-- Sidebar -->
   <nav id="sidebar">
     <ul class="list-unstyled components">
-      <li class="active">
-        <a class="dropdown-toggle">Início</a>
+      <li >
+        <a (click)="menuClick2()">Início</a>
       </li>
       <li>
         <a (click)="menuClick()">Conta Corrente</a>
       </li>
       <li>
-        <a>Transferências</a>
+        <a (click)="menuClick3()">Transferências</a>
       </li>
       <li>
         <a>Pagamentos</a>
@@ -44,4 +44,5 @@
   </nav>
   <app-card-fatura *ngIf="activeMenu === menuEnum.HOME"></app-card-fatura>
   <app-card-cadastro *ngIf="activeMenu === menuEnum.CONTA_CORRENTE"></app-card-cadastro>
+  <app-card-transferencias *ngIf="activeMenu === menuEnum.TRANSFERENCIAS"></app-card-transferencias>
 </div>

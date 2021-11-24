@@ -34,15 +34,11 @@
 .navbar .navbar-nav .nav-item.show .nav-link:hover,
 .navbar .navbar-nav .nav-item.show .nav-link:focus {
   color: #f8f6f9;
-  background-color: #9b59b6;
 }
 .navbar .navbar-toggler {
-  border-color: #9b59b6;
+
 }
-.navbar .navbar-toggler:hover,
-.navbar .navbar-toggler:focus {
-  background-color: #9b59b6;
-}
+
 .navbar .navbar-toggler .navbar-toggler-icon {
   color: #fafbfb;
 }
@@ -67,7 +63,6 @@
   }
   .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #f8f6f9;
-    background-color: #9b59b6;
   }
 }
 
@@ -81,7 +76,6 @@
   }
   .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #f8f6f9;
-    background-color: #9b59b6;
   }
 }
 
@@ -95,7 +89,6 @@
   }
   .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #f8f6f9;
-    background-color: #9b59b6;
   }
 }
 
@@ -109,7 +102,6 @@
   }
   .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #f8f6f9;
-    background-color: #9b59b6;
   }
 }
 
@@ -122,7 +114,6 @@
 }
 .navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item.active {
   color: #f8f6f9;
-  background-color: #9b59b6;
 }
 
 .menu-input {
@@ -346,18 +337,20 @@ a, a:hover, a:focus {
     display: block;
 }
 #sidebar ul li a:hover {
-    color: #9610ef;
-    background: #fff;
+    color: white;
+    background: #9610ef;
+    cursor: pointer;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #9610ef;
+    color: #9610ef;
+    background: white;
+    cursor: pointer;
 }
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #9610ef;
+    background: white;
 }
 
 .card-fatura {
@@ -405,4 +398,8 @@ ul ul a {
 .button-casdastro {
   padding-bottom: 20px;
   padding-left: 500px;
+}
+
+.ng-invalid.ng-touched {
+  border-color: red;
 }

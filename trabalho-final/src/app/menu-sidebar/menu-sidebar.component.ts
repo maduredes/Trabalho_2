@@ -20,4 +20,11 @@ export class MenuSidebarComponent implements OnInit {
     this.activeMenu = this.menuEnum.CONTA_CORRENTE;
   }
 
+  public menuClick2() {
+    this.activeMenu = this.menuEnum.HOME;
+  }
+
+  public menuClick3() {
+    this.activeMenu = this.menuEnum.TRANSFERENCIAS;
+  }
 }

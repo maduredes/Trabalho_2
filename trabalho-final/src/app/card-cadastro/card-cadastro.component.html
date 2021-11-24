@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="formGroup">
   <div class="row card-cadastro-2">
     <div class="card" style="width: 50rem;">
       <div class="card-body" style="padding: 0px;">
@@ -6,33 +6,33 @@
           <h5 class="card-title" style="padding: 10px;">Simular Limite Cartão Play</h5>
         </div>
         <div class="card-cadastro">
-          <div class="mb-3">
+          <div class="mb-3 required">
             <label for="nome" class="form-label">Nome</label>
-            <input type="nome" class="form-control" id="nome">
+            <input type="nome" formControlName="nome" class="form-control" id="nome">
           </div>
-          <div class="mb-3">
+          <div class="mb-3 required">
             <label for="cidade" class="form-label">Cidade</label>
-            <input type="cidade" class="form-control" id="cidade">
+            <input type="cidade" formControlName="cidade" class="form-control" id="cidade">
           </div>
-          <div class="mb-3">
+          <div class="mb-3 required">
             <label for="estado" class="form-label">Estado</label>
-            <input type="estado" class="form-control" id="estado">
+            <input type="estado" formControlName="estado" class="form-control" id="estado">
           </div>
-          <div class="mb-3">
+          <div class="mb-3 required">
             <label for="pais" class="form-label">País</label>
-            <input type="pais" class="form-control" id="pais">
+            <input type="pais" formControlName="pais" class="form-control" id="pais">
           </div>
-          <div class="mb-3">
+          <div class="mb-3 required">
             <label for="dataNasc" class="form-label">Data Nascimento</label>
-            <input type="dataNasc" class="form-control" id="dataNasc">
+            <input type="dataNasc" formControlName="dataNascimento" class="form-control" id="dataNasc">
           </div>
-          <div class="mb-3">
+          <div class="mb-3 required">
             <label for="renda" class="form-label">Renda Mensal</label>
-            <input type="renda" class="form-control" id="renda">
+            <input type="renda" formControlName="rendaMensal" class="form-control" id="renda">
           </div>
         </div>
         <div class="button-casdastro">
-          <button type="submit" style="margin-right: 10px;" class="btn btn-primary">Simular</button>
+          <button type="submit" style="margin-right: 10px;" class="btn btn-primary" (click)="salvarFormulario()">Simular</button>
           <button type="submit" class="btn btn-primary">Limpar</button>
         </div>
       </div>
