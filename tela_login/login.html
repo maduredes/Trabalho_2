@@ -45,6 +45,8 @@
 </div>
 
 <script>
+  var email=document.getElementById("user-email").value;
+  var senha=document.getElementById("user-password").value;
 
 
   function abrirCadastro(){
@@ -54,18 +56,56 @@
       window.open(directory);
   }
 
+
+
 function logar(){
   var novUrl=window.location.href;
-    novUrl= novUrl.replace("/tela_login/login.html","/tela_pagamentos/pagamentos.html");
+  novUrl= novUrl.replace("/tela_login/login.html","/tela_pagamentos/pagamentos.html");
+  let url="http://localhost:8080/api/cadastro-cliente";
+  var existe=false;
 
-if(document.getElementById("user-email").value!='' && document.getElementById("user-password").value!=''){
+if(email!='' && senha!=''){
+    let data= get(url);
+    let usuarios=JSON.parse(data);
+    console.log(usuarios);
 
-        window.open(novUrl);
+    usuarios.array.forEach(element => {
+      var user=existeUsuario(element,email,senha);
+      if(user==true){
+          existe=true;
+      }
+
+    });
+    if(existe){
+      window.open(novUrl);
+    }
+
   }
   
 }
 
+function get(url){
+  let request= new XMLHttpRequest()
+    request.open("GET",url,true)
+    request.setRequestHeader('Content-type','application/json')
+    request.setRequestHeader('Access-Control-Allow-Origin','*')
+    request.setRequestHeader('Access-Control-Allow-Methods','OPTIONS,POST,GET')
 
+    request.send()
+    
+
+   return request.responseText
+}
+
+function existeUsuario(usuario,Email,senha){
+  var email=usuario.email;
+  var password=usuario.password;
+  if(email==Email && password==senha){
+    return true;
+  }
+
+return false;
+}
 </script>
 
 </body>
