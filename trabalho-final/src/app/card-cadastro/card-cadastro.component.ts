@@ -18,8 +18,9 @@ export class CardCadastroComponent implements OnInit {
     this.formGroup = this.getFormGroup();
     const tempoCookies = new Date(new Date().getTime() + 1 * 60 * 1000);
     document.cookie = JSON.stringify({
-      nome: 'Marcos'
-    }) + `; expires=tempoCookies`;
+      nome: 'Marcos',
+      expires: tempoCookies
+    });
   }
 
   public limparFormulario() {
