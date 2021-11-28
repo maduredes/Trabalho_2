@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardTransferenciasComponent implements OnInit {
 
+  public lista = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    const simularLimite = localStorage.getItem("simularLimite");
+    if (simularLimite) {
+      this.lista = JSON.parse(simularLimite);
+    }
   }
 
 }

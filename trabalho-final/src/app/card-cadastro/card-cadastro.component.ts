@@ -16,11 +16,18 @@ export class CardCadastroComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = this.getFormGroup();
+    const tempoCookies = new Date(new Date().getTime() + 1 * 60 * 1000);
+    document.cookie = JSON.stringify({
+      nome: 'Marcos'
+    }) + `; expires=tempoCookies`;
+  }
+
+  public limparFormulario() {
+    this.formGroup.reset();
   }
 
   public salvarFormulario() {
-    debugger
-    if(!this.formGroup.valid){
+    if (!this.formGroup.valid) {
       this.formGroup.markAllAsTouched();
       return;
     }
@@ -31,10 +38,10 @@ export class CardCadastroComponent implements OnInit {
         formSimular.push(this.formGroup.getRawValue());
         localStorage.setItem("simularLimite", JSON.stringify(formSimular));
       }
-    }else{
+    } else {
       const list = [];
       list.push(this.formGroup.getRawValue());
-        localStorage.setItem("simularLimite", JSON.stringify(list));
+      localStorage.setItem("simularLimite", JSON.stringify(list));
     }
     alert(localStorage.getItem("simularLimite"));
   }

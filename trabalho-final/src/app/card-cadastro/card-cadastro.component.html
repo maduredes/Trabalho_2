@@ -1,3 +1,4 @@
+
 <form [formGroup]="formGroup">
   <div class="row card-cadastro-2">
     <div class="card" style="width: 50rem;">
@@ -32,8 +33,9 @@
           </div>
         </div>
         <div class="button-casdastro">
-          <button type="submit" style="margin-right: 10px;" class="btn btn-primary" (click)="salvarFormulario()">Simular</button>
-          <button type="submit" class="btn btn-primary">Limpar</button>
+          <button type="submit" style="margin-right: 10px;" class="btn btn-primary"
+            (click)="salvarFormulario()">Simular</button>
+          <button type="submit" class="btn btn-primary" (click)="limparFormulario()">Limpar</button>
         </div>
       </div>
     </div>
